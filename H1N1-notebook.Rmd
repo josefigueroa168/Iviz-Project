@@ -1,0 +1,51 @@
+---
+title: "H1N1 Exploration"
+author: "Jose Figueroa, Liam Donohoe"
+date: "April 6, 2020"
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+    df_print: kable
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+    df_print: kable
+---
+
+# Introduction
+
+The goal of this project is to create a visualization of the progression of past epidemic or pandemic viruses throughout their lifetimes. In doing this, we hope to be able to provide a better understanding of not only the rate at which these types of viruses can spread throughout the population, but also the time it takes for scientists to develop and distribute a vaccine or cure for the spreading virus.
+
+# Dataset Exploration
+
+Dimensions:
+```{r echo=FALSE}
+H1N1.df <- read.csv("Data/Pandemic (H1N1) 2009.csv")
+print(dim(H1N1.df))
+```
+Dataframe Summary:
+```{r}
+str(H1N1.df)
+summary(H1N1.df)
+```
+
+
+Head:
+```{r}
+head(H1N1.df)
+```
+Tail: 
+```{r}
+tail(H1N1.df)
+```
+Unique Dates:
+```{r}
+unique.dates <- levels(H1N1.df$Update.Time)
+length(unique.dates)
+unique.dates
+```
+
+There are 22 unique weeks to account for. We should look into how to plot on a world map style heatmap (I have an idea on this), and then allowing for the option to traverse time on said heatmap. For this week, we can probably focus on having just 1 week plotted (5/23/2009). We can also easily transorm this notebook into a webapp with [RShiny](https://shiny.rstudio.com/)
