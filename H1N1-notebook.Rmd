@@ -20,9 +20,15 @@ output:
 The goal of this project is to create a visualization of the progression of past epidemic or pandemic viruses throughout their lifetimes. In doing this, we hope to be able to provide a better understanding of not only the rate at which these types of viruses can spread throughout the population, but also the time it takes for scientists to develop and distribute a vaccine or cure for the spreading virus.
 
 # Dataset Exploration
+```{r, echo=FALSE, results=FALSE}
+library(leaflet)
+library(dplyr)
+library(sp)
+```
+
 
 Dimensions:
-```{r echo=FALSE}
+```{r}
 H1N1.df <- read.csv("Data/Pandemic (H1N1) 2009.csv")
 print(dim(H1N1.df))
 ```
@@ -48,4 +54,15 @@ length(unique.dates)
 unique.dates
 ```
 
-There are 22 unique weeks to account for. We should look into how to plot on a world map style heatmap (I have an idea on this), and then allowing for the option to traverse time on said heatmap. For this week, we can probably focus on having just 1 week plotted (5/23/2009). We can also easily transorm this notebook into a webapp with [RShiny](https://shiny.rstudio.com/)
+There are 22 unique weeks to account for. We should look into how to plot on a world map style heatmap (I have an idea on this), and then allowing for the option to traverse time on said heatmap. We can also easily transorm this notebook into a webapp with [RShiny](https://shiny.rstudio.com/)
+
+# Single Date Plot
+
+For this week, we can probably focus on having just 1 week plotted (5/23/2009). Then we can generalize to be interactive through time
+
+```{r}
+leaflet(options=leafletOptions(minZoom=2, maxZoom=18)) %>%
+  setView(-96.8, 39, 4) %>%
+  addTiles()
+```
+
