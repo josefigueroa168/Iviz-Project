@@ -21,20 +21,24 @@ The goal of this project is to create a visualization of the progression of past
 
 # Dataset Exploration
 ```{r, echo=FALSE, results=FALSE}
-library(leaflet)
 library(dplyr)
+library(geojsonio)
+library(here)
+library(leaflet)
 library(sp)
 ```
 
 
 Dimensions:
 ```{r}
-H1N1.df <- read.csv("Data/Pandemic (H1N1) 2009.csv")
+H1N1.df <- here("Data", "Pandemic (H1N1) 2009.csv") %>%
+    read.csv()
+H1N1.df$Country <- as.character(H1N1.df$Country)
 print(dim(H1N1.df))
 ```
 Dataframe Summary:
 ```{r}
-str(H1N1.df)
+glimpse(H1N1.df)
 summary(H1N1.df)
 ```
 
@@ -61,8 +65,34 @@ There are 22 unique weeks to account for. We should look into how to plot on a w
 For this week, we can probably focus on having just 1 week plotted (5/23/2009). Then we can generalize to be interactive through time
 
 ```{r}
+country.shapes <- here("Data", "countries.geojson") %>%
+  geojson_read(what = "sp")
+```
+
+
+```{r}
+CASES <- as.data.frame(country.shapes$ADMIN)
+colnames(CASES) <- c("Country")
+rownames(CASES) <- CASES$Country
+CASES$Cases <- 0
+CASES[H1N1.df[H1N1.df$Update.Time == "5/23/2009 8:00","Country"], "Cases"] <- 
+  H1N1.df[H1N1.df$Update.Time == "5/23/2009 8:00","Cases"]
+
+```
+
+
+
+```{r}
+
 leaflet(options=leafletOptions(minZoom=2, maxZoom=18)) %>%
   setView(-96.8, 39, 4) %>%
   addTiles()
+```
+
+```{r}
+m <- country.shapes %>% 
+  map_leaf() %>%
+  setView(-96.8, 39, 4)
+m
 ```
 
