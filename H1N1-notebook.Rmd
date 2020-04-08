@@ -3,12 +3,12 @@ title: "H1N1 Exploration"
 author: "Jose Figueroa, Liam Donohoe"
 date: "April 6, 2020"
 output:
-  pdf_document:
+  html_document:
     toc: true
     toc_depth: 2
     number_sections: true
     df_print: kable
-  html_document:
+  pdf_document:
     toc: true
     toc_depth: 2
     number_sections: true
@@ -34,7 +34,8 @@ Dimensions:
 H1N1.df <- here("Data", "Pandemic (H1N1) 2009.csv") %>%
     read.csv()
 H1N1.df$Country <- as.character(H1N1.df$Country)
-print(dim(H1N1.df))
+Grand.total.df <- H1N1.df %>% filter(Country == "Grand Total")
+H1N1.df <- H1N1.df %>% filter(Country != "Grand Total")
 ```
 Dataframe Summary:
 ```{r}
@@ -75,23 +76,33 @@ CASES <- as.data.frame(country.shapes$ADMIN)
 colnames(CASES) <- c("Country")
 rownames(CASES) <- CASES$Country
 CASES$Cases <- 0
-CASES[H1N1.df[H1N1.df$Update.Time == "5/23/2009 8:00","Country"], "Cases"] <- 
-  H1N1.df[H1N1.df$Update.Time == "5/23/2009 8:00","Cases"]
-
+CASES[H1N1.df[H1N1.df$Update.Time == "5/23/09 8:00","Country"], "Cases"] <- 
+  H1N1.df[H1N1.df$Update.Time == "5/23/09 8:00","Cases"]
+pal <- colorNumeric(
+  palette = "Reds",
+  domain = country.shapes$CASES
+)
+country.shapes$CASES <- CASES$Cases
 ```
 
 
 
 ```{r}
-
 leaflet(options=leafletOptions(minZoom=2, maxZoom=18)) %>%
   setView(-96.8, 39, 4) %>%
   addTiles()
 ```
+## May 23 2009
 
 ```{r}
 m <- country.shapes %>% 
-  map_leaf() %>%
+  leaflet()  %>%
+  addPolygons(
+    stroke=FALSE,
+    smoothFactor = 0.2,
+    fillOpacity = 0.7,
+    color = ~pal(CASES)
+  )%>%
   setView(-96.8, 39, 4)
 m
 ```
