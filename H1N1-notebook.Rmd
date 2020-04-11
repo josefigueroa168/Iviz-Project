@@ -32,7 +32,7 @@ library(sp)
 Dimensions:
 ```{r}
 H1N1.df <- here("Data", "Pandemic (H1N1) 2009.csv") %>%
-    read.csv()
+    read.csv(encoding = "UTF-8")
 H1N1.df$Country <- as.character(H1N1.df$Country)
 Grand.total.df <- H1N1.df %>% filter(Country == "Grand Total")
 H1N1.df <- H1N1.df %>% filter(Country != "Grand Total")
@@ -76,22 +76,16 @@ CASES <- as.data.frame(country.shapes$ADMIN)
 colnames(CASES) <- c("Country")
 rownames(CASES) <- CASES$Country
 CASES$Cases <- 0
-CASES[H1N1.df[H1N1.df$Update.Time == "5/23/09 8:00","Country"], "Cases"] <- 
-  H1N1.df[H1N1.df$Update.Time == "5/23/09 8:00","Cases"]
+CASES[H1N1.df[H1N1.df$Update.Time == unique.dates[1],"Country"], "Cases"] <- 
+  H1N1.df[H1N1.df$Update.Time == unique.dates[1],"Cases"]
 pal <- colorNumeric(
-  palette = "Reds",
+  palette = "YlOrRd",
   domain = country.shapes$CASES
 )
 country.shapes$CASES <- CASES$Cases
 ```
 
 
-
-```{r}
-leaflet(options=leafletOptions(minZoom=2, maxZoom=18)) %>%
-  setView(-96.8, 39, 4) %>%
-  addTiles()
-```
 ## May 23 2009
 
 ```{r}
@@ -112,6 +106,7 @@ m2 <- country.shapes %>%
   leaflet(options=leafletOptions(minZoom=2, maxZoom=18)) %>%
   setView(-96.8, 39, 4) %>%
   addTiles(options = tileOptions(noWrap = TRUE)) %>%
+  #addProviderTiles("MapBox", options = providerTileOptions(id = "mapbox.light")) %>%
   addPolygons(
     stroke=FALSE,
     smoothFactor = 0.2,
@@ -120,3 +115,92 @@ m2 <- country.shapes %>%
 m2
 ```
 
+## "6/1/09 6:00"
+
+```{r}
+CASES <- as.data.frame(country.shapes$ADMIN)
+colnames(CASES) <- c("Country")
+rownames(CASES) <- CASES$Country
+CASES$Cases <- 0
+CASES[H1N1.df[H1N1.df$Update.Time == unique.dates[6],"Country"], "Cases"] <- 
+  H1N1.df[H1N1.df$Update.Time == unique.dates[6],"Cases"]
+pal <- colorNumeric(
+  palette = "YlOrRd",
+  domain = country.shapes$CASES
+)
+country.shapes$CASES <- CASES$Cases
+```
+
+```{r}
+m2 <- country.shapes %>%
+  leaflet(options=leafletOptions(minZoom=2, maxZoom=18)) %>%
+  setView(-96.8, 39, 4) %>%
+  addTiles(options = tileOptions(noWrap = TRUE)) %>%
+  #addProviderTiles("MapBox", options = providerTileOptions(id = "mapbox.light")) %>%
+  addPolygons(
+    stroke=FALSE,
+    smoothFactor = 0.2,
+    fillOpacity = 0.7,
+    color = ~pal(CASES))
+m2
+```
+
+## "6/10/09 6:00"
+
+```{r}
+CASES <- as.data.frame(country.shapes$ADMIN)
+colnames(CASES) <- c("Country")
+rownames(CASES) <- CASES$Country
+CASES$Cases <- 0
+CASES[H1N1.df[H1N1.df$Update.Time == unique.dates[7],"Country"], "Cases"] <- 
+  H1N1.df[H1N1.df$Update.Time == unique.dates[7],"Cases"]
+pal <- colorNumeric(
+  palette = "YlOrRd",
+  domain = country.shapes$CASES
+)
+country.shapes$CASES <- CASES$Cases
+```
+
+```{r}
+m2 <- country.shapes %>%
+  leaflet(options=leafletOptions(minZoom=2, maxZoom=18)) %>%
+  setView(-96.8, 39, 4) %>%
+  addTiles(options = tileOptions(noWrap = TRUE)) %>%
+  #addProviderTiles("MapBox", options = providerTileOptions(id = "mapbox.light")) %>%
+  addPolygons(
+    stroke=FALSE,
+    smoothFactor = 0.2,
+    fillOpacity = 0.7,
+    color = ~pal(CASES))
+m2
+```
+
+## "6/17/09 12:00"
+
+```{r}
+CASES <- as.data.frame(country.shapes$ADMIN)
+colnames(CASES) <- c("Country")
+rownames(CASES) <- CASES$Country
+CASES$Cases <- 0
+CASES[H1N1.df[H1N1.df$Update.Time == unique.dates[11],"Country"], "Cases"] <- 
+  H1N1.df[H1N1.df$Update.Time == unique.dates[11],"Cases"]
+pal <- colorNumeric(
+  palette = "YlOrRd",
+  domain = country.shapes$CASES
+)
+country.shapes$CASES <- CASES$Cases
+```
+
+```{r}
+m2 <- country.shapes %>%
+  leaflet(options=leafletOptions(minZoom=0, maxZoom=18)) %>%
+  setView(-96.8, 39, 4) %>%
+  addTiles(options = tileOptions(noWrap = TRUE)) %>%
+  #addProviderTiles("MapBox", options = providerTileOptions(id = "mapbox.light")) %>%
+  addPolygons(
+    stroke=FALSE,
+    smoothFactor = 0.2,
+    fillOpacity = 0.7,
+    color = ~pal(CASES))
+m2
+```

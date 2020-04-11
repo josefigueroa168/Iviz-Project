@@ -1,10 +1,10 @@
-Country,Cases,Deaths,Update Time
+ÔªøCountry,Cases,Deaths,Update Time
 Algeria,5,0,7/6/09 9:00
 Antigua and Barbuda,2,0,7/6/09 9:00
 Argentina,2485,60,7/6/09 9:00
 Australia,5298,10,7/6/09 9:00
 Austria,19,0,7/6/09 9:00
-Bahamas,7,0,7/6/09 9:00
+The Bahamas,7,0,7/6/09 9:00
 Bahrain,15,0,7/6/09 9:00
 Bangladesh,18,0,7/6/09 9:00
 Barbados,12,0,7/6/09 9:00
@@ -43,7 +43,6 @@ Finland,47,0,7/6/09 9:00
 France,310,0,7/6/09 9:00
 French Polynesia,4,0,7/6/09 9:00
 Guadaloupe,2,0,7/6/09 9:00
-Martinique,3,0,7/6/09 9:00
 New Caledonia,12,0,7/6/09 9:00
 Saint Martin,1,0,7/6/09 9:00
 Germany,505,0,7/6/09 9:00
@@ -82,7 +81,7 @@ Myanmar,1,0,7/6/09 9:00
 Nepal,5,0,7/6/09 9:00
 Netherlands,135,0,7/6/09 9:00
 Aruba,5,0,7/6/09 9:00
-"Netherlands Antilles, CuraÁao",8,0,7/6/09 9:00
+"Netherlands Antilles, Cura√Åao",8,0,7/6/09 9:00
 Sint Maarten,7,0,7/6/09 9:00
 New Zealand,1059,3,7/6/09 9:00
 Nicaragua,321,0,7/6/09 9:00
@@ -132,7 +131,6 @@ Uruguay,195,4,7/6/09 9:00
 Vanuatu,2,0,7/6/09 9:00
 Venezuela,206,0,7/6/09 9:00
 Vietnam,181,0,7/6/09 9:00
-West Bank and Gaza Strip,60,0,7/6/09 9:00
 Yemen,8,0,7/6/09 9:00
 Grand Total,94512,429,7/6/09 9:00
 Algeria,5,0,7/3/09 9:00
@@ -140,7 +138,7 @@ Antigua and Barbuda,2,0,7/3/09 9:00
 Argentina,1587,26,7/3/09 9:00
 Australia,4568,9,7/3/09 9:00
 Austria,15,0,7/3/09 9:00
-Bahamas,6,0,7/3/09 9:00
+The Bahamas,6,0,7/3/09 9:00
 Bahrain,15,0,7/3/09 9:00
 Bangladesh,12,0,7/3/09 9:00
 Barbados,12,0,7/3/09 9:00
@@ -176,7 +174,6 @@ Fiji,2,0,7/3/09 9:00
 Finland,43,0,7/3/09 9:00
 France,300,0,7/3/09 9:00
 French Polynesia,2,0,7/3/09 9:00
-Martinique,2,0,7/3/09 9:00
 New Caledonia,6,0,7/3/09 9:00
 Germany,470,0,7/3/09 9:00
 Greece,109,0,7/3/09 9:00
@@ -212,7 +209,7 @@ Myanmar,1,0,7/3/09 9:00
 Nepal,5,0,7/3/09 9:00
 Netherlands,134,0,7/3/09 9:00
 Aruba,5,0,7/3/09 9:00
-"Netherlands Antilles, CuraÁao",8,0,7/3/09 9:00
+"Netherlands Antilles, Cura√Åao",8,0,7/3/09 9:00
 Sint Maarten,7,0,7/3/09 9:00
 New Zealand,912,0,7/3/09 9:00
 Nicaragua,308,0,7/3/09 9:00
@@ -258,7 +255,6 @@ Uruguay,195,1,7/3/09 9:00
 Vanuatu,2,0,7/3/09 9:00
 Venezuela,204,0,7/3/09 9:00
 Vietnam,131,0,7/3/09 9:00
-West Bank and Gaza Strip,30,0,7/3/09 9:00
 Yemen,7,0,7/3/09 9:00
 Grand Total,89921,382,7/3/09 9:00
 Algeria,2,0,7/1/09 9:00
@@ -266,7 +262,7 @@ Antigua and Barbuda,2,0,7/1/09 9:00
 Argentina,1587,26,7/1/09 9:00
 Australia,4090,7,7/1/09 9:00
 Austria,15,0,7/1/09 9:00
-Bahamas,6,0,7/1/09 9:00
+The Bahamas,6,0,7/1/09 9:00
 Bahrain,15,0,7/1/09 9:00
 Bangladesh,1,0,7/1/09 9:00
 Barbados,10,0,7/1/09 9:00
@@ -301,7 +297,6 @@ Fiji,2,0,7/1/09 9:00
 Finland,26,0,7/1/09 9:00
 France,277,0,7/1/09 9:00
 French Polynesia,2,0,7/1/09 9:00
-Martinique,2,0,7/1/09 9:00
 New Caledonia,6,0,7/1/09 9:00
 Germany,417,0,7/1/09 9:00
 Greece,92,0,7/1/09 9:00
@@ -335,7 +330,7 @@ Morocco,17,0,7/1/09 9:00
 Myanmar,1,0,7/1/09 9:00
 Nepal,3,0,7/1/09 9:00
 Netherlands,128,0,7/1/09 9:00
-"Netherlands Antilles, CuraÁao",7,0,7/1/09 9:00
+"Netherlands Antilles, Cura√Åao",7,0,7/1/09 9:00
 Sint Maarten,7,0,7/1/09 9:00
 New Zealand,711,0,7/1/09 9:00
 Nicaragua,293,0,7/1/09 9:00
@@ -379,7 +374,6 @@ Uruguay,195,1,7/1/09 9:00
 Vanuatu,2,0,7/1/09 9:00
 Venezuela,193,0,7/1/09 9:00
 Vietnam,123,0,7/1/09 9:00
-West Bank and Gaza Strip,13,0,7/1/09 9:00
 Yemen,7,0,7/1/09 9:00
 Grand Total,77201,332,7/1/09 9:00
 Algeria,2,0,6/29/09 9:00
@@ -387,7 +381,7 @@ Antigua and Barbuda,2,0,6/29/09 9:00
 Argentina,1488,23,6/29/09 9:00
 Australia,4038,7,6/29/09 9:00
 Austria,12,0,6/29/09 9:00
-Bahamas,4,0,6/29/09 9:00
+The Bahamas,4,0,6/29/09 9:00
 Bahrain,15,0,6/29/09 9:00
 Bangladesh,1,0,6/29/09 9:00
 Barbados,10,0,6/29/09 9:00
@@ -422,7 +416,6 @@ Fiji,2,0,6/29/09 9:00
 Finland,26,0,6/29/09 9:00
 France,235,0,6/29/09 9:00
 French Polynesia,3,0,6/29/09 9:00
-Martinique,2,0,6/29/09 9:00
 Germany,366,0,6/29/09 9:00
 Greece,86,0,6/29/09 9:00
 Guatemala,254,2,6/29/09 9:00
@@ -453,7 +446,7 @@ Montenegro,1,0,6/29/09 9:00
 Morocco,11,0,6/29/09 9:00
 Nepal,3,0,6/29/09 9:00
 Netherlands,118,0,6/29/09 9:00
-"Netherlands Antilles, CuraÁao",3,0,6/29/09 9:00
+"Netherlands Antilles, Cura√Åao",3,0,6/29/09 9:00
 Sint Maarten,1,0,6/29/09 9:00
 New Zealand,587,0,6/29/09 9:00
 Nicaragua,277,0,6/29/09 9:00
@@ -496,14 +489,13 @@ Uruguay,195,0,6/29/09 9:00
 Vanuatu,2,0,6/29/09 9:00
 Venezuela,172,0,6/29/09 9:00
 Vietnam,84,0,6/29/09 9:00
-West Bank and Gaza Strip,9,0,6/29/09 9:00
 Yemen,6,0,6/29/09 9:00
 Algeria,2,0,6/26/09 7:00
 Antigua and Barbuda,2,0,6/26/09 7:00
 Argentina,1391,21,6/26/09 7:00
 Australia,3280,3,6/26/09 7:00
 Austria,12,0,6/26/09 7:00
-Bahamas,4,0,6/26/09 7:00
+The Bahamas,4,0,6/26/09 7:00
 Bahrain,15,0,6/26/09 7:00
 Bangladesh,1,0,6/26/09 7:00
 Barbados,10,0,6/26/09 7:00
@@ -538,7 +530,6 @@ Fiji,2,0,6/26/09 7:00
 Finland,26,0,6/26/09 7:00
 France,191,0,6/26/09 7:00
 French Polynesia,1,0,6/26/09 7:00
-Martinique,2,0,6/26/09 7:00
 Germany,333,0,6/26/09 7:00
 Greece,73,0,6/26/09 7:00
 Guatemala,254,2,6/26/09 7:00
@@ -565,7 +556,7 @@ Mexico,8279,116,6/26/09 7:00
 Montenegro,1,0,6/26/09 7:00
 Morocco,11,0,6/26/09 7:00
 Netherlands,116,0,6/26/09 7:00
-"Netherlands Antilles, CuraÁao",3,0,6/26/09 7:00
+"Netherlands Antilles, Cura√Åao",3,0,6/26/09 7:00
 Sint Maarten,1,0,6/26/09 7:00
 New Zealand,453,0,6/26/09 7:00
 Nicaragua,265,0,6/26/09 7:00
@@ -608,7 +599,6 @@ Uruguay,195,0,6/26/09 7:00
 Vanuatu,2,0,6/26/09 7:00
 Venezuela,153,0,6/26/09 7:00
 Vietnam,63,0,6/26/09 7:00
-West Bank and Gaza Strip,9,0,6/26/09 7:00
 Yemen,6,0,6/26/09 7:00
 Grand Total,59814,263,6/26/09 7:00
 Algeria,2,0,6/24/09 7:00
@@ -616,7 +606,7 @@ Antigua and Barbuda,2,0,6/24/09 7:00
 Argentina,1213,7,6/24/09 7:00
 Australia,2857,2,6/24/09 7:00
 Austria,12,0,6/24/09 7:00
-Bahamas,4,0,6/24/09 7:00
+The Bahamas,4,0,6/24/09 7:00
 Bahrain,15,0,6/24/09 7:00
 Bangladesh,1,0,6/24/09 7:00
 Barbados,5,0,6/24/09 7:00
@@ -651,7 +641,6 @@ Fiji,2,0,6/24/09 7:00
 Finland,26,0,6/24/09 7:00
 France,171,0,6/24/09 7:00
 French Polynesia,1,0,6/24/09 7:00
-Martinique,2,0,6/24/09 7:00
 Germany,301,0,6/24/09 7:00
 Greece,58,0,6/24/09 7:00
 Guatemala,235,1,6/24/09 7:00
@@ -676,7 +665,7 @@ Mexico,7847,115,6/24/09 7:00
 Montenegro,1,0,6/24/09 7:00
 Morocco,9,0,6/24/09 7:00
 Netherlands,110,0,6/24/09 7:00
-"Netherlands Antilles, CuraÁao",3,0,6/24/09 7:00
+"Netherlands Antilles, Cura√Åao",3,0,6/24/09 7:00
 Sint Maarten,1,0,6/24/09 7:00
 New Zealand,386,0,6/24/09 7:00
 Nicaragua,220,0,6/24/09 7:00
@@ -717,14 +706,13 @@ Uruguay,195,0,6/24/09 7:00
 Vanuatu,1,,6/24/09 7:00
 Venezuela,135,0,6/24/09 7:00
 Vietnam,56,0,6/24/09 7:00
-West Bank and Gaza Strip,8,0,6/24/09 7:00
 Yemen,6,0,6/24/09 7:00
 Grand Total,55867,238,6/24/09 7:00
 Algeria,1,0,6/22/09 7:00
 Argentina,1010,7,6/22/09 7:00
 Australia,2436,1,6/22/09 7:00
 Austria,9,0,6/22/09 7:00
-Bahamas,2,0,6/22/09 7:00
+The Bahamas,2,0,6/22/09 7:00
 Bahrain,15,0,6/22/09 7:00
 Bangladesh,1,0,6/22/09 7:00
 Barbados,4,0,6/22/09 7:00
@@ -755,7 +743,6 @@ Fiji,1,0,6/22/09 7:00
 Finland,13,0,6/22/09 7:00
 France,147,0,6/22/09 7:00
 French Polynesia,1,0,6/22/09 7:00
-Martinique,1,0,6/22/09 7:00
 Germany,275,0,6/22/09 7:00
 Greece,48,0,6/22/09 7:00
 Guatemala,208,1,6/22/09 7:00
@@ -778,7 +765,7 @@ Malaysia,23,0,6/22/09 7:00
 Mexico,7624,113,6/22/09 7:00
 Morocco,6,0,6/22/09 7:00
 Netherlands,91,0,6/22/09 7:00
-"Netherlands Antilles, CuraÁao",3,0,6/22/09 7:00
+"Netherlands Antilles, Cura√Åao",3,0,6/22/09 7:00
 Sint Maarten,1,0,6/22/09 7:00
 New Zealand,258,0,6/22/09 7:00
 Nicaragua,189,0,6/22/09 7:00
@@ -817,13 +804,12 @@ United States of America,21449,87,6/22/09 7:00
 Uruguay,36,0,6/22/09 7:00
 Venezuela,71,0,6/22/09 7:00
 Vietnam,35,0,6/22/09 7:00
-West Bank and Gaza Strip,8,0,6/22/09 7:00
 Yemen,5,0,6/22/09 7:00
 Grand Total,52160,231,6/22/09 7:00
 Argentina,918,4,6/19/09 7:00
 Australia,2199,0,6/19/09 7:00
 Austria,8,0,6/19/09 7:00
-Bahamas,2,0,6/19/09 7:00
+The Bahamas,2,0,6/19/09 7:00
 Bahrain,12,0,6/19/09 7:00
 Barbados,4,0,6/19/09 7:00
 Belgium,19,0,6/19/09 7:00
@@ -851,7 +837,6 @@ Estonia,5,0,6/19/09 7:00
 Finland,13,0,6/19/09 7:00
 France,131,0,6/19/09 7:00
 French Polynesia,1,0,6/19/09 7:00
-Martinique,1,0,6/19/09 7:00
 Germany,238,0,6/19/09 7:00
 Greece,31,0,6/19/09 7:00
 Guatemala,153,1,6/19/09 7:00
@@ -874,7 +859,7 @@ Malaysia,23,0,6/19/09 7:00
 Mexico,7624,113,6/19/09 7:00
 Morocco,8,0,6/19/09 7:00
 Netherlands,87,0,6/19/09 7:00
-"Netherlands Antilles, CuraÁao",3,0,6/19/09 7:00
+"Netherlands Antilles, Cura√Åao",3,0,6/19/09 7:00
 Sint Maarten,1,0,6/19/09 7:00
 New Zealand,216,0,6/19/09 7:00
 Nicaragua,144,0,6/19/09 7:00
@@ -912,13 +897,12 @@ United States of America,17855,44,6/19/09 7:00
 Uruguay,36,0,6/19/09 7:00
 Venezuela,60,0,6/19/09 7:00
 Vietnam,27,0,6/19/09 7:00
-West Bank and Gaza Strip,5,0,6/19/09 7:00
 Yemen,4,0,6/19/09 7:00
 Grand Total,44287,180,6/19/09 7:00
 Argentina,733,1,6/17/09 12:00
 Australia,2112,0,6/17/09 12:00
 Austria,7,0,6/17/09 12:00
-Bahamas,2,0,6/17/09 12:00
+The Bahamas,2,0,6/17/09 12:00
 Bahrain,12,0,6/17/09 12:00
 Barbados,3,0,6/17/09 12:00
 Belgium,19,0,6/17/09 12:00
@@ -946,7 +930,6 @@ Estonia,4,0,6/17/09 12:00
 Finland,12,0,6/17/09 12:00
 France,118,0,6/17/09 12:00
 French Polynesia,1,0,6/17/09 12:00
-Martinique,1,0,6/17/09 12:00
 Germany,195,0,6/17/09 12:00
 Greece,23,0,6/17/09 12:00
 Guatemala,128,1,6/17/09 12:00
@@ -968,7 +951,7 @@ Malaysia,17,0,6/17/09 12:00
 Mexico,6241,108,6/17/09 12:00
 Morocco,3,0,6/17/09 12:00
 Netherlands,68,0,6/17/09 12:00
-Curacao,1,0,6/17/09 12:00
+Cura√ßao,1,0,6/17/09 12:00
 New Zealand,127,0,6/17/09 12:00
 Nicaragua,118,0,6/17/09 12:00
 Norway,13,0,6/17/09 12:00
@@ -1001,13 +984,12 @@ United States of America,17855,44,6/17/09 12:00
 Uruguay,36,0,6/17/09 12:00
 Venezuela,45,0,6/17/09 12:00
 Vietnam,27,0,6/17/09 12:00
-West Bank and Gaza Strip,2,0,6/17/09 12:00
 Yemen,1,0,6/17/09 12:00
 Grand Total,39620,167,6/17/09 12:00
 Argentina,343,0,6/15/09 17:00
 Australia,1823,0,6/15/09 17:00
 Austria,7,0,6/15/09 17:00
-Bahamas,1,0,6/15/09 17:00
+The Bahamas,1,0,6/15/09 17:00
 Bahrain,1,0,6/15/09 17:00
 Barbados,3,0,6/15/09 17:00
 Belgium,17,0,6/15/09 17:00
@@ -1079,12 +1061,11 @@ United States of America,17855,45,6/15/09 17:00
 Uruguay,36,0,6/15/09 17:00
 Venezuela,25,0,6/15/09 17:00
 Vietnam,25,0,6/15/09 17:00
-West Bank and Gaza Strip,2,0,6/15/09 17:00
 Grand Total,35928,163,6/15/09 17:00
 Argentina,343,0,6/12/09 7:00
 Australia,1307,0,6/12/09 7:00
 Austria,7,0,6/12/09 7:00
-Bahamas,1,0,6/12/09 7:00
+The Bahamas,1,0,6/12/09 7:00
 Bahrain,1,0,6/12/09 7:00
 Barbados,3,0,6/12/09 7:00
 Belgium,14,0,6/12/09 7:00
@@ -1159,7 +1140,7 @@ Grand Total,29669,145,6/12/09 7:00
 Argentina,256,0,6/11/09 14:00
 Australia,1307,0,6/11/09 14:00
 Austria,7,0,6/11/09 14:00
-Bahamas,1,0,6/11/09 14:00
+The Bahamas,1,0,6/11/09 14:00
 Bahrain,1,0,6/11/09 14:00
 Barbados,3,0,6/11/09 14:00
 Belgium,14,0,6/11/09 14:00
@@ -1234,7 +1215,7 @@ Grand Total,28774,144,6/11/09 14:00
 Argentina,235,0,6/10/09 6:00
 Australia,1224,0,6/10/09 6:00
 Austria,5,0,6/10/09 6:00
-Bahamas,2,0,6/10/09 6:00
+The Bahamas,2,0,6/10/09 6:00
 Bahrain,1,0,6/10/09 6:00
 Barbados,2,0,6/10/09 6:00
 Belgium,14,0,6/10/09 6:00
@@ -1309,7 +1290,7 @@ Grand Total,27737,141,6/10/09 6:00
 Argentina,202,0,6/8/09 6:00
 Australia,1051,0,6/8/09 6:00
 Austria,5,0,6/8/09 6:00
-Bahamas,1,0,6/8/09 6:00
+The Bahamas,1,0,6/8/09 6:00
 Bahrain,1,0,6/8/09 6:00
 Barbados,2,0,6/8/09 6:00
 Belgium,14,0,6/8/09 6:00
@@ -1383,7 +1364,7 @@ Grand Total,25288,139,6/8/09 6:00
 Argentina,147,0,6/5/09 6:00
 Australia,876,0,6/5/09 6:00
 Austria,2,0,6/5/09 6:00
-Bahamas,1,0,6/5/09 6:00
+The Bahamas,1,0,6/5/09 6:00
 Bahrain,1,0,6/5/09 6:00
 Barbados,1,0,6/5/09 6:00
 Belgium,13,0,6/5/09 6:00
@@ -1453,7 +1434,7 @@ Grand Total,21940,125,6/5/09 6:00
 Argentina,131,0,6/3/09 6:00
 Australia,501,0,6/3/09 6:00
 Austria,1,0,6/3/09 6:00
-Bahamas,1,0,6/3/09 6:00
+The Bahamas,1,0,6/3/09 6:00
 Bahrain,1,0,6/3/09 6:00
 Belgium,13,0,6/3/09 6:00
 Bolivia,3,0,6/3/09 6:00
@@ -1520,7 +1501,7 @@ Grand Total,19273,117,6/3/09 6:00
 Argentina,100,0,6/1/09 6:00
 Australia,297,0,6/1/09 6:00
 Austria,1,0,6/1/09 6:00
-Bahamas,1,0,6/1/09 6:00
+The Bahamas,1,0,6/1/09 6:00
 Bahrain,1,0,6/1/09 6:00
 Belgium,12,0,6/1/09 6:00
 Bolivia,3,0,6/1/09 6:00
