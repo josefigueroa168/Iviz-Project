@@ -1,6 +1,6 @@
 source("modules/libs.R")
 #TODO: Cleanup date format in column names
-
+#TODO: Move data imports into separate file
 country.shapes <- here("Data", "countries.geojson") %>%
   geojson_read(what = "sp")
 cases.df <- readRDS(here("Data", "cases.rds"))
@@ -10,7 +10,7 @@ date.choices <- colnames(cases.df)
 ui <- fluidPage(
   fluidRow(tags$h1("H1N1 Stuff")),
   fluidRow(
-    column(4, 
+    column(3, 
            radioButtons(inputId = "date",
                        label = "Dates",
                        choices = date.choices,
@@ -18,7 +18,7 @@ ui <- fluidPage(
                        inline = FALSE # Might make horizontal later
                        )
            ), 
-    column(8, leafletOutput("h1n1.map", height = "600px")) #Todo: Print da map
+    column(9, leafletOutput("h1n1.map", height = "600px")) #Todo: Print da map
   ),
   hr()
 ) 
