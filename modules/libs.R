@@ -1,3 +1,11 @@
+# Required Libraries
+# - dplyr
+# - geojsonio
+# - here
+# - leaflet
+# - shiny
+# - tidyr
+
 dependencies <- c("dplyr", "geojsonio", "here", "leaflet", "shiny", "tidyr")
 
 for (dep in dependencies) {
