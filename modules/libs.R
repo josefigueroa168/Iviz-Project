@@ -1,3 +1,6 @@
+library(dplyr)
+library(geojsonio)
 library(here)
 library(leaflet)
 library(shiny)
+library(tidyr)

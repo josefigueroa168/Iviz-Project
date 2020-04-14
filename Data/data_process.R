@@ -29,3 +29,4 @@ for (i in 1:length(unique.dates)) {
 }
 
 cases.df$Cases <- rowSums(cases.df[,unique.dates[1:length(unique.dates)]])
+saveRDS(cases.df, file = here("Data", "cases.rds"))
