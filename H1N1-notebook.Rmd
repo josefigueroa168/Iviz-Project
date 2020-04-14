@@ -32,8 +32,8 @@ library(sp)
 Dimensions:
 ```{r}
 H1N1.df <- here("Data", "Pandemic (H1N1) 2009.csv") %>%
-    read.csv(encoding = "UTF-8")
-H1N1.df$Country <- as.character(H1N1.df$Country)
+    read.csv(encoding = "UTF-8", stringsAsFactors = FALSE)
+#H1N1.df$Country <- as.character(H1N1.df$Country)
 Grand.total.df <- H1N1.df %>% filter(Country == "Grand Total")
 H1N1.df <- H1N1.df %>% filter(Country != "Grand Total")
 ```
