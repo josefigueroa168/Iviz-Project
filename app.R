@@ -1,5 +1,9 @@
 source("modules/libs.R")
 #TODO: Cleanup date format in column names
+latitude <- c(35.94077, 35.83770, 35.84545, 35.81584, 35.79387, 36.05600)
+longitude <- c(-78.58010, -78.78084, -78.72444, -78.62568, -78.64262, -78.67600)
+radius<-c(15, 12, 12, 12, 12, 15)
+ids<-c("a", "b", "c", "d", "e", "f")
 
 country.shapes <- here("Data", "countries.geojson") %>%
   geojson_read(what = "sp")
@@ -20,7 +24,8 @@ ui <- fluidPage(
            ), 
     column(8, leafletOutput("h1n1.map", height = "600px")) #Todo: Print da map
   ),
-  hr()
+  hr(),
+  fluidRow(verbatimTextOutput("Click_text")) # Display text based on click location
 ) 
 
 server <- function(input, output, session) {
@@ -49,6 +54,16 @@ server <- function(input, output, session) {
         color = ~pal(CASES))
     
   })
-}
+  
+  # Observer to look for clicks on shapes(countries) on the map
+  observe({
+    click<-input$h1n1.map_shape_click
+    if(is.null(click))
+      return()
+    text<-paste("Lattitude ", click$lat, "Longtitude ", click$lng)
+    text2<-paste("You've selected point ", click$id, "at", click$lat, ", ", click$lng)
+    output$Click_text<-renderText({ text2 }) # Output location: "Click_text"
+    })
+  }
 
 shinyApp(ui = ui, server = server)
