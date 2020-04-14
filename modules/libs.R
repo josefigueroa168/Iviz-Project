@@ -1,7 +1,7 @@
 dependencies <- c("dplyr", "geojsonio", "here", "leaflet", "shiny", "tidyr")
 
 for (dep in dependencies) {
-  if(!require(dep)) {
+  if(!(dep %in% installed.packages()[, "Package"])) {
     install.packages(dep)
   }
 }

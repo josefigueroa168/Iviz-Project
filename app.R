@@ -1,6 +1,7 @@
 source("modules/libs.R")
 #TODO: Cleanup date format in column names
 #TODO: Move data imports into separate file
+
 country.shapes <- here("Data", "countries.geojson") %>%
   geojson_read(what = "sp")
 cases.df <- readRDS(here("Data", "cases.rds"))
@@ -18,7 +19,7 @@ ui <- fluidPage(
                        inline = FALSE # Might make horizontal later
                        )
            ), 
-    column(9, leafletOutput("h1n1.map", height = "600px")) #Todo: Print da map
+    column(9, leafletOutput("h1n1.map", height = "600px"))
   ),
   hr(),
   fluidRow(verbatimTextOutput("Click_text")) # Display text based on click location
