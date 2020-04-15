@@ -15,7 +15,7 @@ ui <- fluidPage(
            radioButtons(inputId = "date",
                        label = "Dates",
                        choices = date.choices,
-                       selected = date.choices[1],
+                       selected = date.choices[1], # Currently first index represents total cases
                        inline = FALSE # Might make horizontal later
                        )
            ), 
@@ -48,12 +48,18 @@ server <- function(input, output, session) {
       addPolygons(
         stroke=FALSE,
         smoothFactor = 0.2,
-        fillOpacity = 0.7,
-        color = ~pal(CASES)) %>%
+        fillOpacity = 0.5,
+        color = ~pal(CASES),
+        highlight = highlightOptions(weight=50,
+                                     color="blue",
+                                     fillOpacity=0.9,
+                                     bringToFront=TRUE),
+        label=paste(country.shapes$ADMIN, ", ", country.shapes$CASES, " cases", sep='')) %>%
       addLegend(position = "bottomright",
               pal = pal, values = range(0, 10000), # Currently legend has a fixed scale, would be better to base it on highest value in table 
               title = "Cases",
               opacity = 1)
+    
     
   })
   # Observer to look for clicks on shapes(countries) on the map
