@@ -64,15 +64,13 @@ server <- function(input, output, session) {
   })
   # Observer to look for clicks on shapes(countries) on the map
   observe({
-    click<-input$map_marker_click
+    click<-input$h1n1.map_shape_click
     if(is.null(click))
       return()
     text2<-paste("You've selected point ", click$id)
     output$Click_text<-renderText({
       text2
     })
-    output$Click_lat <- click.lat
-    output$Click_lng <- click.lng
   })
 }
 
