@@ -49,17 +49,24 @@ server <- function(input, output, session) {
         stroke=FALSE,
         smoothFactor = 0.2,
         fillOpacity = 0.7,
-        color = ~pal(CASES))
+        color = ~pal(CASES)) %>%
+      addLegend(position = "bottomright",
+              pal = pal, values = range(0, 10000), # Currently legend has a fixed scale, would be better to base it on highest value in table 
+              title = "Cases",
+              opacity = 1)
     
   })
   # Observer to look for clicks on shapes(countries) on the map
   observe({
-    click<-input$h1n1.map_shape_click
+    click<-input$map_marker_click
     if(is.null(click))
       return()
-    text<-paste("Lattitude ", click$lat, "Longtitude ", click$lng)
-    text2<-paste("You've selected point ", click$id, "at", click$lat, ", ", click$lng)
-    output$Click_text<-renderText({ text2 }) # Output location: "Click_text"
+    text2<-paste("You've selected point ", click$id)
+    output$Click_text<-renderText({
+      text2
+    })
+    output$Click_lat <- click.lat
+    output$Click_lng <- click.lng
   })
 }
 
