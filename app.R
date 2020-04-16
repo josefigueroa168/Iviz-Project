@@ -67,6 +67,9 @@ server <- function(input, output, session) {
     click<-input$h1n1.map_shape_click
     if(is.null(click))
       return()
+    else
+      leafletProxy("h1n1.map") %>%
+      setView(lng=click$lng, lat = click$lat, zoom = 3) # Adjust zoom and position on click to center the country clicked on
     text2<-paste("You've selected point ", click$id)
     output$Click_text<-renderText({
       text2
