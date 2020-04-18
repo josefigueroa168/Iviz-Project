@@ -1,6 +1,7 @@
 source("modules/libs.R")
 #TODO: Cleanup date format in column names
 #TODO: Move data imports into separate file
+#TODO: Use population information to normalize data (i.e. Per cases 100k)
 
 country.shapes <- here("Data", "countries.geojson") %>%
   geojson_read(what = "sp")

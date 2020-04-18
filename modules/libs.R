@@ -13,6 +13,7 @@ for (dep in dependencies) {
     install.packages(dep)
   }
 }
+
 library(dplyr)
 library(geojsonio)
 library(here)
