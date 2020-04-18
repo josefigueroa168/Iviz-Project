@@ -47,6 +47,8 @@ server <- function(input, output, session) {
       domain = country.shapes$CASES
     )
     country.shapes$CASES <- CASES$Cases
+    min.range <- round(min(cases.df[,input$date]))
+    max.range <- round(max(cases.df[,input$date]))
     
     country.shapes %>%
       leaflet(options=leafletOptions(minZoom=2, maxZoom=18)) %>%
@@ -62,10 +64,10 @@ server <- function(input, output, session) {
                                      color="blue",
                                      fillOpacity=0.9,
                                      bringToFront=TRUE),
-        label=paste(country.shapes$ADMIN, ", ", country.shapes$CASES, " cases", sep='')) %>%
+        label=paste(country.shapes$ADMIN, ": ", round(country.shapes$CASES), " cases per million.", sep='')) %>%
       addLegend(position = "bottomright",
-              pal = pal, values = range(0, 10000), # Currently legend has a fixed scale, would be better to base it on highest value in table 
-              title = "Cases",
+              pal = pal, values = range(min.range, max.range), # Currently legend has a fixed scale, would be better to base it on highest value in table 
+              title = "Cases per million",
               opacity = 1)
     
     

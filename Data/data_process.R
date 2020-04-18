@@ -43,6 +43,7 @@ cases.df[,"7/4/09"] <- rowSums(cases.df[,unique.dates[19:21]])
 cases.df[,"7/11/09"] <- cases.df[,unique.dates[22]]
 cases.df <- cases.df %>% select(-unique.dates)
 
+colnames(cases.df) <- c("Overall Cases","5/23/09","5/30/09","6/6/09","6/13/09","6/20/09","6/27/09","7/4/09","7/11/09")
 
 population.09 <- as.data.frame(population.09[unique.countries,], row.names = unique.countries)
 #population.09[is.na(population.09)] <- 10000 # TODO: Will put better estimate later
