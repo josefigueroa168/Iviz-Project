@@ -5,7 +5,7 @@ source("modules/libs.R")
 
 country.shapes <- here("Data", "countries.geojson") %>%
   geojson_read(what = "sp")
-cases.df <- readRDS(here("Data", "cases.rds"))
+cases.df <- readRDS(here("Data", "cases_norm.rds"))
 cases.ncol <- ncol(cases.df)
 date.choices <- colnames(cases.df)
 
@@ -13,14 +13,16 @@ ui <- fluidPage(
   fluidRow(tags$h1("H1N1 Stuff")),
   fluidRow(
     column(3, 
-           radioButtons(inputId = "date",
-                       label = "Dates",
-                       choices = date.choices,
-                       selected = date.choices[1], # Currently first index represents total cases
-                       inline = FALSE # Might make horizontal later
-                       )
+           HTML("SIDEBAR")
            ), 
-    column(9, leafletOutput("h1n1.map", height = "600px"))
+    column(9, 
+           radioButtons(inputId = "date",
+                        label = "Dates",
+                        choices = date.choices,
+                        selected = date.choices[1], # Currently first index represents total cases
+                        inline = TRUE # Might make horizontal later
+           ),
+           leafletOutput("h1n1.map", height = "600px"))
   ),
   hr(),
   fluidRow(verbatimTextOutput("Click_text")) # Display text based on click location

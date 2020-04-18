@@ -4,6 +4,10 @@ library(here)
 H1N1.df <- here("Data", "Pandemic (H1N1) 2009.csv") %>%
   read.csv(encoding = "UTF-8", stringsAsFactors = FALSE) # Read in csv file
 
+population.09 <- here("Data", "global_population_totals.csv") %>%
+  read.csv(encoding = "UTF-8", stringsAsFactors = TRUE, check.names = FALSE, row.names = 1) %>%
+  select(c("2009"))
+
 H1N1.df <- H1N1.df %>% filter(Country != "Grand Total") # Filter out grand total column
 
 unique.countries <- unique(H1N1.df$Country) # List of all unique countries
@@ -38,5 +42,26 @@ cases.df[,"6/27/09"] <- rowSums(cases.df[,unique.dates[16:18]])
 cases.df[,"7/4/09"] <- rowSums(cases.df[,unique.dates[19:21]]) 
 cases.df[,"7/11/09"] <- cases.df[,unique.dates[22]]
 cases.df <- cases.df %>% select(-unique.dates)
+
+
+population.09 <- as.data.frame(population.09[unique.countries,], row.names = unique.countries)
+#population.09[is.na(population.09)] <- 10000 # TODO: Will put better estimate later
+population.09["Bosnia and Hezegovina",] <- 3735938
+population.09["Cook Island",] <- 17459
+population.09["Guadaloupe",] <- 395700
+population.09["Laos",] <- 6148623
+population.09["Netherlands Antilles, CuraÁao",] <- 146833
+population.09["Curaçao",] <- 146833
+population.09["Saint Lucia",] <- 172221
+population.09["Slovakia",] <- 5386406
+population.09["Guernsey",] <- 63026
+population.09["Jersey",] <- 97857
+
+
 saveRDS(cases.df, file = here("Data", "cases.rds")) # Save formatted data
+
+for (i in colnames(cases.df)) {
+  cases.df[,i] <- (cases.df[,i] / population.09) * 1000000 # Rate per million persons
+}
+saveRDS(cases.df, file = here("Data", "cases_norm.rds"))
 
