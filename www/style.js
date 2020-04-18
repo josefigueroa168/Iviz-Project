@@ -6,5 +6,6 @@ for (var i in inputs) {
   if (inputs[i].type == "radio") {
     console.log("Hello");
     inputs[i].type = "button";
+    //inputs[i].getElementsByTagName("span")[0].html = "";
   }
 }
