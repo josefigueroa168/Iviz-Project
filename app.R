@@ -11,14 +11,35 @@ date.choices <- colnames(cases.df)
 
 ui <- fluidPage(
   theme = "style.css",
-  fluidRow(tags$h1("H1N1 Stuff")),
+  fluidRow(column(12, class="title", tags$h1("2009 H1N1 Rates"))),
   fluidRow(
-    column(3, 
-           HTML("SIDEBAR")
-           ), 
-    column(9, 
+    column(3,class = "sidebar",
+           fluidRow(class = "content",
+           HTML("&emsp;In the spring of 2009, a novel influenza A (H1N1) virus emerged. 
+                It was detected first in the United States and spread quickly across 
+                the United States and the world. This new H1N1 virus contained a unique 
+                combination of influenza genes not previously identified in animals or 
+                people. This virus was designated as influenza A (H1N1)pdm09 virus. Ten 
+                years later work continues to better understand influenza, prevent disease
+                , and prepare for the next pandemic.<sup>1</sup></br>
+                &emsp;The H1N1 dataset provides reported global cases for H1N1 throughout the summer of 
+                2009, provided by the World Health Organization (WHO)<sup>2</sup>. The cases
+                were normalized with correlating 2009 population estimates provided by The World 
+                Bank.<sup>3</sup> Our app color palette was selected with Paletton<sup>4</sup> and 
+                RColorBrewer.<sup>5</sup>")
+           ),
+           fluidRow(class = "footer",
+                    HTML(
+                      "<a href='https://www.cdc.gov/'>1 Centers for Disease Control and Prevention</a></br>",
+                      "<a href='https://www.who.int/csr/en/'>2 World Health Organization</a></br>",
+                      "<a href='https://data.worldbank.org/indicator/sp.pop.totl'>3 The World Bank</a></br>",
+                      "<a href='http://paletton.com/'>4 Paletton</a></br>",
+                      "<a href='https://www.rdocumentation.org/packages/heatmaply/versions/1.0.0/topics/RColorBrewer_colors'>5 RColorBrewer</a>"
+                    )
+           )), 
+    column(8, 
            radioButtons(inputId = "date",
-                        label = "Dates",
+                        label = "",
                         choices = date.choices,
                         #choiceNames = date.choices,
                         #choicesValues = date.choices,
@@ -28,7 +49,6 @@ ui <- fluidPage(
            ),
            leafletOutput("h1n1.map", height = "600px"))
   ),
-  hr(),
   #includeScript(here("www","style.js")),
   fluidRow(verbatimTextOutput("Click_text")) # Display text based on click location
   
