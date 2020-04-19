@@ -1,7 +1,7 @@
+# Authors: Jose Figueroa, Liam Donohoe
+
 source("modules/libs.R")
-#TODO: Cleanup date format in column names
 #TODO: Move data imports into separate file
-#TODO: Use population information to normalize data (i.e. Per cases 100k)
 
 country.shapes <- here("Data", "countries.geojson") %>%
   geojson_read(what = "sp")
@@ -10,6 +10,8 @@ cases.ncol <- ncol(cases.df)
 date.choices <- colnames(cases.df)
 
 ui <- fluidPage(
+  tags$head(tags$link(rel="stylesheet",
+                      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")),
   theme = "style.css",
   fluidRow(column(12, class="title", tags$h1("2009 H1N1 Rates"))),
   fluidRow(
@@ -50,8 +52,13 @@ ui <- fluidPage(
            leafletOutput("h1n1.map", height = "600px"))
   ),
   #includeScript(here("www","style.js")),
-  fluidRow(verbatimTextOutput("Click_text")) # Display text based on click location
-  
+  #fluidRow(verbatimTextOutput("Click_text")), # Display text based on click location
+  hr(),
+  fluidRow(
+    column(12, class="footer2",
+           HTML("<a href='https://github.com/josefigueroa168/Iviz-Project' class='fa fa-github'></a>")
+           )
+  )
 ) 
 
 server <- function(input, output, session) {
